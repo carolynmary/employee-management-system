@@ -17,19 +17,19 @@ VALUES ("Owner", "250000", "2"),
        ("Finance Manager", "115000", "3");
 
 INSERT INTO employees (first_name, last_name, role_id)
-VALUES ("Big", "Bird", "2"), 
-       ("Olive", "Oyl", "1"), 
-       ("Cookie", "Monster", "1"), 
-       ("Fozzie", "Bear", "1"), 
-       ("Mr.", "Snuffleupagus", "1"), 
-       ("Judy", "Jetson", "2"), 
-       ("Fred", "Flintstone", "2"), 
-       ("Elroy", "Jetson", "2"), 
-       ("Tinky", "Winky", "2"), 
-       ("Scooby.", "Doo", "2"),
-       ("Inspector", "Gadget", "2"), 
-       ("Bart", "Simpson", "2"), 
-       ("Papa", "Smurf", "2"), 
-       ("Count", "von Count", "3");
+VALUES ("Big", "Bird", "1"), 
+       ("Olive", "Oyl", "2"), 
+       ("Cookie", "Monster", "3"), 
+       ("Fozzie", "Bear", "4"), 
+       ("Mr.", "Snuffleupagus", "4"), 
+       ("Judy", "Jetson", "5"), 
+       ("Fred", "Flintstone", "6"), 
+       ("Elroy", "Jetson", "6"), 
+       ("Tinky", "Winky", "6"), 
+       ("Scooby", "Doo", "7"),
+       ("Inspector", "Gadget", "8"), 
+       ("Bart", "Simpson", "9"), 
+       ("Papa", "Smurf", "10"), 
+       ("Count", "von Count", "11");
 
        -- how to set the FK manager-id?? -- 
