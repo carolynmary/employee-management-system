@@ -65,17 +65,44 @@ async function viewAllEmployees() {
     start();
 }
 
-// async function viewAllRoles() {
-//     const roles = await db.findAllRoles();
-//     console.table(roles);
+// async function viewAllEmployeesByDept() {
+//     // get all depts
+//     // input dept as choices in inquirer question
+//     //  view employees with department = answer
+//     const departments = await db.findAllDepartments();
+//     const departmentChoices = departments.map()
+//         inquirer
+//             .prompt({
+//                 type: "list",
+//                 name: "department",
+//                 message: "Select a department.",
+//                 choices: departmentChoices // [...departmentChoices]
+//             })
+//             .then(function (answer) {
+//                 switch (answer.department = ------) {
+//                     case "View All Employees":
+//                         viewAllEmployees();
+//                         break;
+    
+//                 }}
+                        
+//                     findAllEmployeesByDept
+//     const employees = await db.findAllEmployees();
+//     console.table(employees);
 //     start();
 // }
 
-// async function viewAllDepartments() {
-//     const depts = await db.findAllDepartments();
-//     console.table(depts);
-//     start();
-// }
+async function viewAllRoles() {
+    const roles = await db.findAllRoles();
+    console.table(roles);
+    start();
+}
+
+async function viewAllDepartments() {
+    const depts = await db.findAllDepartments();
+    console.table(depts);
+    start();
+}
 
 // async function addEmployee() {
 //     const depts = await db.createEmployee(); // read all info then filter/map/etc
