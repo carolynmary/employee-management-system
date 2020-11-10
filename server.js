@@ -14,8 +14,8 @@ function start() { // try ES6 function
             message: "What would you like to do?",
             choices: [
                 "View All Employees",
-                "View All Roles",
-                "View All Departments",
+                // "View All Roles",
+                // "View All Departments",
                 "Update an Employee's Role",
                 "Add Employee",
                 "Add Role",
@@ -59,10 +59,76 @@ function start() { // try ES6 function
         });
 }
 
+// working
 async function viewAllEmployees() {
-    const employees = await db.findAllEmployees();
+    const employees = await db.findAllEmployeeInfo();
+    console.table("\n");
     console.table(employees);
     start();
+}
+
+// working
+async function addEmployee() {
+    try {
+        const roles = await db.findAllRoles();
+        const managers = await db.findAllEmployees();
+
+        const answers = await inquirer.prompt([
+            {
+                type: "input",
+                name: "firstName",
+                message: "Enter employee's first name:",
+            },
+            {
+                type: "input",
+                name: "lastName",
+                message: "Enter employee's last name:",
+            },
+            {
+                type: "list",
+                name: "role",
+                message: "Select employee's role:",
+                choices: function () {  
+                    let choiceArray = [];
+                    for (var i = 0; i < roles.length; i++) {
+                        choiceArray.push(roles[i].title);
+                    }
+                    return choiceArray;
+                },
+            },
+            {
+                type: "list",
+                name: "manager",
+                message: "Select employee's manager:",
+                choices: function () {
+                    let choiceArray = [];
+                    for (var i = 0; i < managers.length; i++) {
+                        choiceArray.push(`${managers[i].first_name} ${managers[i].last_name}`);
+                    }
+                    return choiceArray;
+                }
+            },
+        ]);
+
+        for (var i = 0; i < roles.length; i++) {
+            if (roles[i].title === answers.role) {
+                newRoleId = roles[i].role_id
+            }
+        }
+        
+        for (var i = 0; i < managers.length; i++) {
+            if (`${managers[i].first_name} ${managers[i].last_name}` === answers.manager) {
+                newManagerId = managers[i].employee_id;
+            }
+        }
+
+        await db.createEmployee(answers, newRoleId, newManagerId);
+        console.table(`\n${answers.firstName} ${answers.lastName} has been added.\n`);
+        start();
+    } catch (err) {
+        console.log(err);
+    }
+
 }
 
 // async function viewAllEmployeesByDept() {
@@ -83,9 +149,9 @@ async function viewAllEmployees() {
 //                     case "View All Employees":
 //                         viewAllEmployees();
 //                         break;
-    
+
 //                 }}
-                        
+
 //                     findAllEmployeesByDept
 //     const employees = await db.findAllEmployees();
 //     console.table(employees);
