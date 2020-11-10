@@ -92,17 +92,17 @@ async function viewAllEmployees() {
 //     start();
 // }
 
-async function viewAllRoles() {
-    const roles = await db.findAllRoles();
-    console.table(roles);
-    start();
-}
+// async function viewAllRoles() {
+//     const roles = await db.findAllRoles();
+//     console.table(roles);
+//     start();
+// }
 
-async function viewAllDepartments() {
-    const depts = await db.findAllDepartments();
-    console.table(depts);
-    start();
-}
+// async function viewAllDepartments() {
+//     const depts = await db.findAllDepartments();
+//     console.table(depts);
+//     start();
+// }
 
 // async function addEmployee() {
 //     const depts = await db.createEmployee(); // read all info then filter/map/etc
