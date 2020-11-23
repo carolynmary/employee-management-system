@@ -26,7 +26,8 @@ Run command `node server` and follow the prompts to:
 • View departments, roles, employees
 • Add departments, roles, employees
 • Update employee roles
-<iframe src="https://drive.google.com/file/d/1nGjK26kXesREOuWdKdypdMkXGHXp_B7h/preview" width="640" height="480"></iframe>
+
+![demo](./assets/ezgif.com-gif-maker.gif)
 
 ## Credits
   
