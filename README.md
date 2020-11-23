@@ -32,7 +32,7 @@ Run command `node server` and follow the prompts to:
 ## Credits
   
 <!-- Third Party Asset Creators? Tutorials> // link to web presence -->
-[Inquirer](lurl) // NPM CLI that generates questions </br>
+[Inquirer](https://www.npmjs.com/package/inquirer) // NPM CLI that generates questions </br>
 
 ## Contributing
 
