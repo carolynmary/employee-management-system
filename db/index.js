@@ -35,6 +35,42 @@ class DB {
         )
     }
 
+    createRole(answers, newDeptId) {
+        return this.connection.query(
+            "INSERT INTO roles SET ?",
+            {
+                title: answers.title,
+                salary: answers.salary,
+                dept_id: newDeptId
+            },
+        )
+    }
+
+    createDepartment(answers) {
+        return this.connection.query(
+            "INSERT INTO departments SET ?",
+            {
+                department: answers.dept
+            },
+        )
+    }
+
+    updateEmployee(empId, newRoleId, newManagerId) {
+        return this.connection.query(
+            "UPDATE employees SET ? WHERE ?",
+            [
+                {
+                    role_id: newRoleId,
+                    manager_id: newManagerId
+                },
+                {
+                    employee_id: empId
+                }
+            ]
+        )
+    }
+
+
     // findAllEmployeesByDept() {
     //     return this.connection.query(
     //         "SELECT employee_id, first_name, last_name, title, department, salary, manager_id AS manager FROM employees 

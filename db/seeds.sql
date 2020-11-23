@@ -1,4 +1,4 @@
-USE employee_tracker_db;
+USE employee_management_db;
 
 INSERT INTO departments (department)
 VALUES ("Kitchen"), ("Finance"), ("Operations");
