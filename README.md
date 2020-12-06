@@ -23,9 +23,9 @@ Run command `npm i` to install dependencies.
 ## How to Use 
 
 Run command `node server` and follow the prompts to: 
-• View departments, roles, employees
-• Add departments, roles, employees
-• Update employee roles
+• View departments, roles, employees <br>
+• Add departments, roles, employees <br>
+• Update employee roles <br>
 
 ![demo](./assets/ezgif.com-gif-maker.gif)
 
