@@ -8,7 +8,7 @@
  
 - - -
 - - -
-### Organize your business by using this Content Management System (CMS) / command line application to view and manage the departments, roles and employees of your company.
+### Organize your business by using this Content Management System (CMS) / command line interface to view and manage the departments, roles and employees of your company.
 
 - - -
 - - -
