@@ -22,7 +22,7 @@ Run command `npm i` to install dependencies.
 
 ## How to Use 
 
-Run command `node server` and follow the prompts to: 
+Run command `node server` and follow the prompts to: <br>
 • View departments, roles, employees <br>
 • Add departments, roles, employees <br>
 • Update employee roles <br>
